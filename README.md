@@ -1,2 +1,4 @@
-# exeter-simulator
-A game parodying the trials and tribulations of attending Phillips Exeter Academy. Inspired by Toggl's Startup Simulator &amp; created January 2018. 
+# Phillips Exeter Simulator
+The scripts for this game were adapted from Toggl's [startup simulator](https://toggl.com/startup-simulator/) and FlashFrame's [college athlete simulator](https://www.flashframe.io/college-simulator/). 
+
+Play the game [here](http://www.christinehu.org/exeter-simulator/)!
