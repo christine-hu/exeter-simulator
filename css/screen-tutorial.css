@@ -1,0 +1,18 @@
+h1 {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.list-tutorial{
+    list-style:none;
+    padding:0;
+    margin-bottom: 30px;
+}
+.list-tutorial li{
+    line-height:24px;
+    margin-bottom:20px
+}
+
+.button-im-ready {
+	margin-top: 33px;
+}

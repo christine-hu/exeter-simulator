@@ -1,0 +1,70 @@
+body{
+    background-color: #a1c7fa
+}
+
+#screen-start.board{
+    background: 0 0;
+}
+
+.clouds{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    position:fixed
+}
+.cloud{
+    position:absolute;
+    width:150px;
+    height:68px;
+    right:-150px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    transform:translate(0);
+    animation-name:drift;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-duration:40s;
+    animation-play-state:running
+}
+.cloud-1{
+    top:10%;
+    background-image:url(../img/cloud-01.png)
+}
+.cloud-2{
+    top:50%;
+    animation-delay:-20s;
+    background-image:url(../img/cloud-02.png)
+}
+
+#screen-start .logo {
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+  background-image: url(../img/title.png);
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+}
+
+#screen-start .sparkle,#screen-start .sparkle0{
+    background-image:url(https://storage.googleapis.com/foto-trac/static/game/img/sparkle0.png)
+}
+#screen-start .sparkle{
+    position:absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:15px;
+    background-size:cover;
+    image-rendering:pixelated
+}
+#screen-start .sparkle1{
+    background-image:url(https://storage.googleapis.com/foto-trac/static/game/img/sparkle1.png)
+}
+
+.start-highscore{
+    margin:10px 0;
+    color:#000
+}
+
+
+

@@ -1,0 +1,196 @@
+<html class="no-js wf-vt323-n4-active wf-active" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Phillips Exeter Simulator</title>
+      <meta name="description" content="Graduate with a Perfect GPA or Die Trying">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="theme-color" content="#9ac7ff">
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <meta name="msapplication-config" content="img/share-images/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
+      <meta name="apple-mobile-web-app-title" content="Phillips Exeter Simulator">
+      <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+      <!-- css -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/screen-credits.css">
+      <link rel="stylesheet" href="css/screen-start.css">
+      <link rel="stylesheet" href="css/screen-tutorial.css">
+      <!-- -->
+      <meta property="og:url" content="http://www.christinehu.org/exeter-simulator/">
+      <meta property="og:type" content="game">
+      <meta property="og:title" content="Phillips Exeter Sim | Put your intelligence to the test">
+      <meta property="og:description" content="Graduate with a Perfect GPA or Die Trying">
+      <meta property="og:image" content="http://www.christinehu.org/exeter-simulator/img/exeter700.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> 
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323" media="all">
+      <script>WebFont.load({
+         google: {
+           families: ['VT323']
+         }
+         });
+      </script> <script>this.top.location !== this.location && (this.top.location = this.location)</script> 
+      <script></script>
+   </head>
+   <body class="start">
+      <div id="screen-loading" class="board">
+         <div class="loader">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50" xml:space="preserve">
+               <rect x="0" y="0" width="4" height="10" fill="#333" transform="translate(0 10.985)">
+                  <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite"></animateTransform>
+               </rect>
+               <rect x="10" y="0" width="4" height="10" fill="#333" transform="translate(0 15.6816)">
+                  <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+               </rect>
+               <rect x="20" y="0" width="4" height="10" fill="#333" transform="translate(0 2.34829)">
+                  <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+               </rect>
+            </svg>
+         </div>
+         <span class="loader-text">loading</span> 
+      </div>
+      <div class="clouds">
+         <div class="cloud cloud-1"></div>
+         <div class="cloud cloud-2"></div>
+         <div class="seagull"></div>
+         <div class="seagull seagull-2"></div>
+         <div class="seagull seagull-3"></div>
+      </div>
+      <div class="clouds">
+         <div class="wave"></div>
+         <div class="wave" style="left: 45%; bottom: 18px"></div>
+         <div class="wave" style="left: 55%"></div>
+         <div class="wave" style="left: 63%"></div>
+      </div>
+      <div id="screen-start" class="board">
+         <div class="logo">
+            <div class="sparkle sparkle0" style="display: none; left: 34px; top: 15px;"></div>
+            <div class="sparkle sparkle1" style="display: none; left: 34px; top: 15px;"></div>
+         </div>
+         <div class="start-highscore" style=""> Your high score: <span class="start-highscore-value"></span> </div>
+         <div class="button button-start-game">
+            <div class="button-top"></div>
+            <div class="button-middle"> 
+               <span class="button-middle-content"> Start Game </span> 
+            </div>
+            <div class="button-bottom"></div>
+         </div>
+         <div class="button button-about">
+            <div class="button-top"></div>
+            <div class="button-middle"> <span class="button-middle-content"> About </span> </div>
+            <div class="button-bottom"></div>
+         </div>
+         <div class="button-mute" style="opacity: 1.0"></div>
+      </div>
+      <div id="screen-tutorial" class="board">
+         <h1>Tutorial</h1>
+         <div>
+            <ul class="list-tutorial">
+               <li>Your goal is to get into at least 8 (eight) Ivy League universities by senior spring.</li>
+               <li>Use your time wisely!</li>
+               <li>Also, make sure to get enough sleep :)</li>
+            </ul>
+         </div>
+         <div class="button button-im-ready">
+            <div class="button-top"></div>
+            <div class="button-middle"> <span class="button-middle-content"> I'm Ready! </span> </div>
+            <div class="button-bottom"></div>
+         </div>
+         <div class="button-mute"></div>
+      </div>
+      <div id="screen-credits" class="board">
+         <h2>About</h2>
+         <div>
+            <p> This game was created in January 2018 and was inspired by the <a target="_blank" href="https://www.flashframe.io/college-simulator/">College Athlete Simulator</a> from Flashframe.</p>
+            <p> Music: PhilllChabbb (<a target="_blank" href="https://soundcloud.com/philllchabbb/">Soundcloud</a>) </p>
+         </div>
+         <div class="button-mute"></div>
+         <div class="button button-credits-to-start">
+            <div class="button-top"></div>
+            <div class="button-middle"> <span class="button-middle-content"> Back </span> </div>
+            <div class="button-bottom"></div>
+         </div>
+      </div>
+      <div id="screen-game" class="board">
+         <div class="hud">
+            <div class="valuation">
+               <div> <span> <span class="valuation-value">0</span><span class="valuation-unit"></span> </span> <span class="valuation-change"> <span class="valuation-change-value">0</span> </span> </div>
+               <div>Admits</div>
+            </div>
+            <div class="happiness">
+               <div class="happiness-value"> <img src="https://storage.googleapis.com/foto-trac/static/game/img/happiness-06.png"> </div>
+               <div class="hud-label">GPA</div>
+            </div>
+            <div class="calendar">
+               <div class="calendar-week hud-label">Week<span class="calendar-week-number">0</span></div>
+               <div class="calendar-bar">
+                  <div class="calendar-bar-fill"></div>
+                  <div class="calendar-bar-delta"></div>
+               </div>
+            </div>
+         </div>
+         <div class="card-container">
+            <div class="card card0">
+               <div class="card-picture">
+                  <div class="card-picture-image"></div>
+                  <div class="card-picture-shadow"></div>
+               </div>
+               <div class="card-description">
+                  <div class="card-description-character"> Dummy </div>
+                  <div class="card-description-question"> Dummy </div>
+               </div>
+            </div>
+            <div class="card card1">
+               <div class="card-picture">
+                  <div class="card-picture-image"></div>
+                  <div class="card-picture-shadow"></div>
+               </div>
+               <div class="card-description">
+                  <div class="card-description-character"> Dummy </div>
+                  <div class="card-description-question"> Dummy </div>
+               </div>
+            </div>
+         </div>
+         <div class="buttons">
+            <div class="button button-yes">
+               <div class="button-top"></div>
+               <div class="button-middle"> <span class="button-middle-content"> Okay </span> </div>
+               <div class="button-bottom"></div>
+            </div>
+            <div class="button button-no">
+               <div class="button-top"></div>
+               <div class="button-middle"> <span class="button-middle-content"> Nope </span> </div>
+               <div class="button-bottom"></div>
+            </div>
+         </div>
+         <div class="buttons buttons-gameover" style="display: none">
+            <div class="button button-share">
+               <div class="button-top"></div>
+               <div class="button-middle"> <a class="button-middle-content share-twitter" target="_blank" href=""> Share </a> </div>
+               <div class="button-bottom"></div>
+            </div>
+            <div class="button button-restart">
+               <div class="button-top"></div>
+               <div class="button-middle"> <span class="button-middle-content"> Play again </span> </div>
+               <div class="button-bottom"></div>
+            </div>
+         </div>
+         <div class="button-mute"></div>
+      </div>
+      <div id="landscape"></div>
+      <script src="bower_components/jquery.min.js"></script> 
+      <script src="bower_components/howler.js"></script> 
+      <script src="bower_components/lodash.js"></script> 
+      <script src="js/cards.import.js"></script> 
+      <script src="js/storage.js"></script> 
+      <script src="js/renderer.js"></script> 
+      <script src="js/main.js"></script> 
+      <script src="snd/music.js"></script> 
+      <script src="snd/sfx.js"></script> 
+      <script src="js/sound.js"></script> 
+      <script src="js/game.js"></script> 
+      <script src="js/eggs.js"></script> 
+      <script src="js/jquery.clicky-loader.js"></script>   
+   </body>
+</html>

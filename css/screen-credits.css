@@ -1,0 +1,15 @@
+.list-credits {
+	list-style:none;padding:0
+}
+
+.list-credits li {
+	margin-bottom:2px;line-height:20px
+}
+
+#screen-credits a {
+	color:#fff
+}
+
+.button-credits-to-start {
+	margin-top: 50px;
+}

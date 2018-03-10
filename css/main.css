@@ -1,0 +1,622 @@
+html{
+    color:#222;
+    font-size:1em;
+    line-height:1.4
+}
+::selection{
+    background:#b3d4fc;
+    text-shadow:none
+}
+hr{
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #ccc;
+    margin:1em 0;
+    padding:0
+}
+audio,canvas,iframe,img,svg,video{
+    vertical-align:middle
+}
+svg{
+    width:100%;
+    height:auto
+}
+fieldset{
+    border:0;
+    margin:0;
+    padding:0
+}
+textarea{
+    resize:vertical
+}
+.hidden{
+    display:none!important
+}
+.visuallyhidden{
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px;
+    white-space:nowrap
+}
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{
+    clip:auto;
+    height:auto;
+    margin:0;
+    overflow:visible;
+    position:static;
+    width:auto;
+    white-space:inherit
+}
+.invisible{
+    visibility:hidden
+}
+.clearfix:after,.clearfix:before{
+    content:" ";
+    display:table
+}
+.clearfix:after{
+    clear:both
+}
+*,:after,:before{
+    box-sizing:border-box
+}
+.header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10
+}
+.header a.toggl-logo{
+    content:'';
+    background:url(https://storage.googleapis.com/foto-trac/static/game/img/toggl_header.png) no-repeat;
+    background-size:contain;
+    height:68px;
+    position:absolute;
+    top:0;
+    left:0;
+    width:300px
+}
+.board,.valuation{
+    position:relative
+}
+.header ul{
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:flex-end
+}
+@media screen and (max-width:950px){
+    #screen-credits .header,#screen-game .header,#screen-tutorial .header{
+        display:none
+    }
+}
+.header li{
+    display:inline-block;
+    margin:0 20px;
+    cursor:pointer
+}
+.header li:last-child{
+    margin-right:10px
+}
+.header li img{
+    height:20px
+}
+
+
+body,html{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0
+}
+body{
+    font-family:VT323,monospace;
+    font-size:20px;
+    text-align:center;
+    background-color:#a1c7fa;
+    color:#efefef
+}
+body.loading #screen-loading.board{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-flow:column nowrap;
+    flex-flow:column nowrap;
+    box-shadow:none;
+    margin:auto;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center
+}
+body.credits #screen-credits.board,body.game #screen-game.board,body.gameover #screen-gameover.board,body.tutorial #screen-tutorial.board{
+    display:inline-block
+}
+body.start #screen-start.board{
+    display:inline-block;
+    box-shadow:none
+}
+
+.board,.card{
+    box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius:2px
+}
+body.game #screen-game.board{
+    overflow:hidden
+}
+.board{
+    width:300px;
+    height:400px;
+    margin: auto;
+    margin-top: 10px;
+    background-color:#616273;
+    padding:15px 20px;
+    display:none;
+}
+#screen-loading.board{
+    background:0 0
+}
+.loader{
+    display:block;
+    width:80px;
+    font-size:16px
+}
+.loader-text{
+    font-size:36px;
+    text-transform:uppercase
+}
+.loader svg{
+    margin-bottom:10px
+}
+.loader path,.loader rect{
+    fill:#FFF
+}
+.hud{
+    font-size: 15px;
+    margin-bottom:25px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between
+}
+.hud-label{
+    margin-right: 20px;
+    font-size:15px
+}
+.valuation{
+    margin-left: 10px;
+    text-align:left;
+    width:100px
+}
+.valuation-unit{
+    color:silver
+}
+.valuation-change{
+    position:absolute;
+    display:none;
+    left:0;
+    top:-10px
+}
+.calendar-bar,.calendar-bar-delta,.calendar-bar-fill{
+    display:inline-block;
+    height:15px
+}
+.happiness-value>*{
+    margin-right: 20px;
+    width:24px
+}
+.happiness-value>.RAGE{
+    -webkit-animation-name:happiness-rage;
+    animation-name:happiness-rage;
+    -webkit-animation-duration:.2s;
+    animation-duration:.2s;
+    -webkit-animation-play-state:running;
+    animation-play-state:running;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite
+}
+.happiness-value>.JOY{
+    -webkit-animation-name:happiness-joy;
+    animation-name:happiness-joy;
+    -webkit-animation-duration:.5s;
+    animation-duration:.5s;
+    -webkit-animation-play-state:running;
+    animation-play-state:running;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite
+}
+@-webkit-keyframes happiness-rage{
+    0%,100%{
+        -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    33%{
+        -webkit-transform:translateX(-2px);
+        transform:translateX(-2px)
+    }
+    66%{
+        -webkit-transform:translateX(2px);
+        transform:translateX(2px)
+    }
+}
+@keyframes happiness-rage{
+    0%,100%{
+        -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    33%{
+        -webkit-transform:translateX(-2px);
+        transform:translateX(-2px)
+    }
+    66%{
+        -webkit-transform:translateX(2px);
+        transform:translateX(2px)
+    }
+}
+@-webkit-keyframes happiness-joy{
+    0%{
+        -webkit-transform:translateY(0x);
+        transform:translateY(0x)
+    }
+    66%{
+        -webkit-transform:translateY(3px);
+        transform:translateY(3px)
+    }
+    100%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+}
+@keyframes happiness-joy{
+    0%{
+        -webkit-transform:translateY(0x);
+        transform:translateY(0x)
+    }
+    66%{
+        -webkit-transform:translateY(3px);
+        transform:translateY(3px)
+    }
+    100%{
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+}
+.calendar{
+    width:90px
+}
+.calendar-week{
+    margin-right: 3px;
+    text-align:right
+}
+.calendar-bar{
+    background-color:#535363;
+    width:70px;
+    margin-top:5px;
+    margin-left:15px
+}
+.calendar-bar-fill{
+    float:right;
+    background-color:#26bb26;
+    width:100%
+}
+.calendar-bar-delta{
+    float:right;
+    background-color: #23a008;
+    width:0
+}
+.card-container{
+    position:relative;
+    width: 250px;
+    margin-left: 5px;
+    margin-top: 37px;
+}
+.card,.card1,.card:before{
+    top:0;
+    position:absolute
+}
+.card{
+    width:100%;
+    padding:0 20px;
+    background:#efefef;
+    height:165px;
+    -webkit-transform-origin:50% 50% 0;
+    transform-origin:50% 50% 0;
+    -webkit-transform:translateX(140%);
+    transform:translateX(140%)
+}
+.card:before{
+    content:"";
+    display:block;
+    z-index:1;
+    left:0;
+    bottom:0;
+    right:0;
+    outline:#968383 solid 5px
+}
+.card.defeat{
+    background:#1f1f1f;
+    outline:#493d3d solid 5px
+}
+.card.defeat .card-description{
+    color:#efefef
+}
+.card-picture{
+    position:relative;
+    height:50px
+}
+.card-picture-image{
+    background-image:url(https://storage.googleapis.com/foto-trac/static/game/img/card.png);
+    background-size:100%;
+    width:80px;
+    height:80px;
+    z-index:2;
+    position:absolute;
+    top:-30px;
+    margin-left:65px
+}
+.card-picture-shadow{
+    position:absolute;
+    background:rgba(0,0,0,.2);
+    height:80px;
+    width:80px;
+    top:-27px;
+    z-index:1;
+    left:140px;
+    margin-left:-72px
+}
+.card-description{
+    color:#000;
+    text-align:left;
+    margin-top: 12px;
+}
+.card-description-character{
+    font-size: 15px;
+    font-weight:700;
+    text-align:left;
+    margin-bottom:7px
+}
+.card-description-question{
+    font-size: 15px;
+    word-wrap:break-word;
+    line-height:18px
+}
+.buttons{
+    font-size: 18px;
+    position:absolute;
+    bottom:20px;
+    left:35px
+}
+.button{
+    width:230px;
+    cursor:pointer;
+    margin: auto;
+    margin-bottom:15px
+}
+.button:hover{
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05)
+}
+.buttons .button:last-child{
+    margin-bottom:0
+}
+.button[disabled]{
+    cursor:default;
+    pointer-events:none
+}
+.button.picked{
+    -webkit-transform:scale(.95);
+    transform:scale(.95)
+}
+.button.picked::after{
+    content:'';
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,.3)
+}
+.seagull,.wave{
+    background-repeat:no-repeat
+}
+.button-top{
+    position:relative;
+    background-color:#fff;
+    height:4px
+}
+.button-top::before{
+    content:"";
+    width:2px;
+    height:2px;
+    position:absolute;
+    left:0;
+    top:2px;
+    background-color:#898989
+}
+.button-middle{
+    background-color:#D6D6D6;
+    display:table;
+    width:100%;
+    line-height:23px;
+    color:#000
+}
+.button-middle::after,.button-middle::before{
+    width:4px;
+    content:""
+}
+.button-middle::before{
+    background-color:#898989;
+    display:table-cell
+}
+.button-middle-content{
+    display:inline-block;
+    padding:4px 0 6px;
+    text-decoration:none;
+    color:#000
+}
+.button-middle::after{
+    background-color:#fff;
+    display:table-cell
+}
+.button-bottom{
+    position:relative;
+    background-color:#898989;
+    height:4px
+}
+.button-bottom::after,.button-mute,.seagull,.wave{
+    position:absolute
+}
+.button-bottom::before{
+    content:"";
+    width:2px;
+    height:2px;
+    position:absolute;
+    right:2px;
+    top:2px;
+    background-color:#898989;
+    z-index:2
+}
+.button-bottom::after{
+    content:"";
+    width:4px;
+    height:4px;
+    right:0;
+    top:0;
+    background-color:#fff;
+    z-index:1
+}
+.button:active .button-top{
+    background-color:#898989
+}
+.button:active .button-top::before{
+    background-color:#fff
+}
+.button:active .button-middle{
+    background-color:#c6c6c6
+}
+.button:active .button-middle::before{
+    background-color:#fff
+}
+.button:active .button-middle-content{
+    -webkit-transform:translateX(-2px) translateY(2px);
+    transform:translateX(-2px) translateY(2px)
+}
+.button:active .button-middle::after{
+    background-color:#898989
+}
+.button:active .button-bottom,.button:active .button-bottom::before{
+    background-color:#fff
+}
+.button:active .button-bottom::after{
+    background-color:#898989
+}
+.button-mute{
+    background-image:url(../img/unmuted.png);
+    bottom:8px;
+    right:3px;
+    width:18px;
+    height:18px;
+    cursor:pointer;
+    background-size:cover;
+    -ms-interpolation-mode:nearest-neighbor;
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering:-moz-crisp-edges;
+    image-rendering:pixelated;
+    opacity:.6
+}
+.muted{
+    background-image:url(../img/muted.png)
+}
+.button-mute:hover{
+    opacity:1
+}
+@keyframes drift{
+    100%{
+        transform:translate(calc(-100vw - 150px))
+    }
+}
+.seagull{
+    width:25px;
+    height:15px;
+    top:10vh;
+    right:0;
+    image-rendering:pixelated;
+    background-image:url(https://storage.googleapis.com/foto-trac/static/game/img/seagull-sheet-large.png);
+    background-size:100px 15px;
+    animation:seagulls-ftw .6s infinite running steps(3),drift 75s infinite running
+}
+.seagull-2{
+    top:30vh;
+    animation-delay:-20s
+}
+.seagull-3{
+    top:70vh;
+    animation-delay:-10s
+}
+@keyframes seagulls-ftw{
+    100%{
+        background-position-x:-75px
+    }
+}
+.wave{
+    bottom:11px;
+    height:3px;
+    width:15px;
+    left:32%;
+    background-image:url(https://storage.googleapis.com/foto-trac/static/game/img/wave.png);
+    animation:wave 4s infinite running steps(2)
+}
+.wave:nth-of-type(2){
+    animation-delay:-1s
+}
+.wave:nth-of-type(3){
+    animation-delay:-1.5s
+}
+.wave:nth-of-type(4){
+    animation-delay:-.5s
+}
+@media screen and (max-width:900px){
+    .wave{
+        display:none
+    }
+}
+@keyframes wave{
+    100%{
+        opacity:.5;
+        transform:translateX(6px) translateY(2px)
+    }
+}
+
+#landscape {
+  position: fixed;
+  width: 100%;
+  height: 640px;
+  bottom: 0;
+  right: 0;
+  margin-left: -10px;
+  background-image: url(../img/exeter.png);
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 800px) {
+  #landscape {
+    background-image: url(../img/exeter700.png);
+  }
+}
