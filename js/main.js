@@ -1,6 +1,6 @@
 /**
  * Basic rules
- * - Hello there fransss
+ * - Hello there friends
  * - Credit goes to Toggl for writing this code; I adapted it...shamelessly
  * - Game consists of 12 terms.
  * - Each term consists of N cards.
